@@ -14,7 +14,7 @@ function showMainMenu() {
       message: "How would you like to proceed?",
       type: "list",
       name: "main",
-      choices: ["View all departments", "View all roles", "View all employees", 'Add department', 'Add role', 'Add employee', 'Update employee role'],
+      choices: ["View all departments", "View all roles", "View all employees", 'Add a department', 'Add a role', 'Add an employee', 'Update an employee role'],
     })
     .then((answer) => {
       if (answer.main === "View all employees") {
@@ -110,7 +110,7 @@ function showMainMenu() {
           showMainMenu();
         });
       }
-      if (answer.main === 'Add department') {
+      if (answer.main === 'Add a department') {
         inquirer.prompt([
             {
                 message: 'Enter new department name',
@@ -126,7 +126,7 @@ function showMainMenu() {
             })
         })
       }
-      if (answer.main === 'Add role') {
+      if (answer.main === 'Add a role') {
         inquirer.prompt([
             {
                 message: 'Enter the title of the new role',
@@ -176,7 +176,7 @@ function showMainMenu() {
             })
         })
       }
-      if (answer.main === 'Update employee role') {
+      if (answer.main === 'Update an employee role') {
         inquirer.prompt([
             {
                 message: 'Enter the employee ID you would ike to update',
